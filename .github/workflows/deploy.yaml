@@ -44,6 +44,9 @@ jobs:
       - name: Build project
         run: pnpm build
 
+      - name: Add CNAME file for domain
+        run: echo bykowskiolaf.dev > ./dist/CNAME
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:

@@ -5,8 +5,6 @@ import Particles from 'react-particles';
 import type { Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 
-import theme from '../../consts/theme';
-
 const MyParticles = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);

@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: Autography;
+  src: url('./assets/fonts/Autography.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  font-family: 'Just Another Hand', cursive;
   font-family: 'Inter';
   line-height: 1.5;
   font-weight: 400;

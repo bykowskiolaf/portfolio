@@ -11,12 +11,19 @@ const LandingPage = () => {
   const navigate = useNavigate();
   return (
     <>
-      <h1
-        style={{ fontFamily: 'Autography' }}
-        className="text-9xl pt-5">
-        {' '}
-        Bykowski Olaf
-      </h1>
+      <div className="flex-col">
+        <h1
+          style={{ fontFamily: 'Autography' }}
+          className="text-9xl py-5">
+          {' '}
+          Bykowski Olaf
+        </h1>
+        <h2>
+          This will be a portfolio site, it is still deep in development so
+          check back regurarly for updates!
+        </h2>
+      </div>
+
       <div className="block place-self-end">
         <List
           sx={{ '--List-radius': '10px' }}
@@ -25,7 +32,9 @@ const LandingPage = () => {
           color="primary"
           size="lg">
           <ListItem>
-            <ListItemButton onClick={() => navigate('/projects')}>
+            <ListItemButton
+              disabled
+              onClick={() => navigate('/projects')}>
               <ListItemContent>Projects</ListItemContent>
             </ListItemButton>
 
@@ -35,13 +44,17 @@ const LandingPage = () => {
           </ListItem>
           <ListDivider inset="gutter" />
           <ListItem>
-            <ListItemButton onClick={() => navigate('/contact')}>
+            <ListItemButton
+              disabled
+              onClick={() => navigate('/contact')}>
               <ListItemContent>Contact</ListItemContent>
             </ListItemButton>
           </ListItem>
           <ListDivider inset="gutter" />
           <ListItem>
-            <ListItemButton onClick={() => navigate('/about')}>
+            <ListItemButton
+              disabled
+              onClick={() => navigate('/about')}>
               <ListItemContent>About me</ListItemContent>
             </ListItemButton>
           </ListItem>

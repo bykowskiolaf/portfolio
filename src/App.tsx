@@ -7,7 +7,7 @@ import theme from './assets/styles/theme';
 import ColorModeToggle from './components/ColorModeToggle';
 import MainWrapper from './components/MainWrapper';
 import MyParticles from './components/Particles';
-import LandingPage from './pages/LangingPage';
+import LandingPage from './pages/LandingPage';
 import ErrorElement from './components/ErrorElement';
 
 const router = createBrowserRouter(

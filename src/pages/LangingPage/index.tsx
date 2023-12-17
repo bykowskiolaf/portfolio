@@ -14,8 +14,8 @@ const LandingPage = () => {
           variant="outlined"
           className="flex justify-between p-5 w-5/6 h-5/6 rounded-2xl">
           <h1
-            style={{ fontFamily: 'Just Another Hand' }}
-            className="text-9xl">
+            style={{ fontFamily: 'Autography' }}
+            className="text-9xl pt-5">
             {' '}
             Bykowski Olaf
           </h1>

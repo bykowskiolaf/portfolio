@@ -5,7 +5,7 @@ import { CssVarsProvider } from '@mui/joy/styles';
 
 import ColorModeToggle from './components/ColorModeToggle';
 import MyParticles from './components/Particles';
-import theme from './consts/theme';
+import theme from './assets/styles/theme';
 import LandingPage from './pages/LangingPage';
 
 function App() {

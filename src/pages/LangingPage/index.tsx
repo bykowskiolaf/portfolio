@@ -7,12 +7,9 @@ import {
   Sheet
 } from '@mui/joy';
 
-import ColorModeToggle from '../../components/ColorModeToggle';
-
 const LandingPage = () => {
   return (
     <>
-      <div className="text-main relative flex w-screen h-screen justify-center items-center z-50">
         <Sheet
           variant="outlined"
           className="flex justify-between p-5 w-5/6 h-5/6 rounded-2xl">
@@ -22,7 +19,6 @@ const LandingPage = () => {
             {' '}
             Bykowski Olaf
           </h1>
-          <ColorModeToggle />
           <div className="block place-self-end">
             <List
               sx={{ '--List-radius': '10px' }}
@@ -54,7 +50,6 @@ const LandingPage = () => {
             </List>
           </div>
         </Sheet>
-      </div>
     </>
   );
 };

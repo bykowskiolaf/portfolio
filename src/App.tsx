@@ -17,8 +17,10 @@ function App() {
         <CssBaseline />
         <ColorModeToggle />
         <Sheet>
-          <MyParticles />
-          <LandingPage />
+          <MyParticles /> 
+          <div className="text-main relative flex w-screen h-screen justify-center items-center z-50">
+            <LandingPage />
+          </div>
         </Sheet>
       </CssVarsProvider>
     </>

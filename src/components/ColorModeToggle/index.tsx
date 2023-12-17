@@ -5,17 +5,18 @@ const ColorModeToggle = () => {
   const { mode, setMode } = useColorScheme();
 
   return (
-    <DarkModeSwitch
-      style={{
-        marginBottom: '2rem',
-        position: 'absolute',
-        right: '2rem',
-        top: '2rem'
-      }}
-      checked={mode === 'dark'}
-      onChange={() => setMode(mode === 'light' ? 'dark' : 'light')}
-      size={40}
-    />
+      <DarkModeSwitch
+        style={{
+          marginBottom: '2rem',
+          position: 'absolute',
+          right: '2rem',
+          top: '2rem',
+          zIndex: 100
+        }}
+        checked={mode === 'light'}
+        onChange={() => setMode(mode === 'light' ? 'dark' : 'light')}
+        size={40}
+      />
   );
 };
 

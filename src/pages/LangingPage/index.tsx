@@ -3,53 +3,50 @@ import {
   ListDivider,
   ListItem,
   ListItemButton,
-  ListItemContent,
-  Sheet
+  ListItemContent
 } from '@mui/joy';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   return (
     <>
-        <Sheet
+      <h1
+        style={{ fontFamily: 'Autography' }}
+        className="text-9xl pt-5">
+        {' '}
+        Bykowski Olaf
+      </h1>
+      <div className="block place-self-end">
+        <List
+          sx={{ '--List-radius': '10px' }}
+          className="rounded-xl"
           variant="outlined"
-          className="flex justify-between p-5 w-5/6 h-5/6 rounded-2xl">
-          <h1
-            style={{ fontFamily: 'Autography' }}
-            className="text-9xl pt-5">
-            {' '}
-            Bykowski Olaf
-          </h1>
-          <div className="block place-self-end">
-            <List
-              sx={{ '--List-radius': '10px' }}
-              className="rounded-xl"
-              variant="outlined"
-              color="primary"
-              size="lg">
-              <ListItem>
-                <ListItemButton>
-                  <ListItemContent>Projects</ListItemContent>
-                </ListItemButton>
+          color="primary"
+          size="lg">
+          <ListItem>
+            <ListItemButton onClick={() => navigate('/projects')}>
+              <ListItemContent>Projects</ListItemContent>
+            </ListItemButton>
 
-                {/* <ListItemButton>
+            {/* <ListItemButton>
                     <ListItemContent>Blog</ListItemContent>
                   </ListItemButton> */}
-              </ListItem>
-              <ListDivider inset="gutter" />
-              <ListItem>
-                <ListItemButton>
-                  <ListItemContent>Contact</ListItemContent>
-                </ListItemButton>
-              </ListItem>
-              <ListDivider inset="gutter" />
-              <ListItem>
-                <ListItemButton>
-                  <ListItemContent>About me</ListItemContent>
-                </ListItemButton>
-              </ListItem>
-            </List>
-          </div>
-        </Sheet>
+          </ListItem>
+          <ListDivider inset="gutter" />
+          <ListItem>
+            <ListItemButton onClick={() => navigate('/contact')}>
+              <ListItemContent>Contact</ListItemContent>
+            </ListItemButton>
+          </ListItem>
+          <ListDivider inset="gutter" />
+          <ListItem>
+            <ListItemButton onClick={() => navigate('/about')}>
+              <ListItemContent>About me</ListItemContent>
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </div>
     </>
   );
 };

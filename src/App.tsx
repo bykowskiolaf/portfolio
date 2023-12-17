@@ -1,12 +1,37 @@
 import '@fontsource/inter';
-import { Sheet } from '@mui/joy';
 import CssBaseline from '@mui/joy/CssBaseline';
 import { CssVarsProvider } from '@mui/joy/styles';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import ColorModeToggle from './components/ColorModeToggle';
-import MyParticles from './components/Particles';
 import theme from './assets/styles/theme';
+import ColorModeToggle from './components/ColorModeToggle';
+import MainWrapper from './components/MainWrapper';
+import MyParticles from './components/Particles';
 import LandingPage from './pages/LangingPage';
+import ErrorElement from './components/ErrorElement';
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <LandingPage />,
+      errorElement: <ErrorElement />
+    },
+    {
+      path: '/projects',
+      element: <div>Projects</div>
+    },
+    {
+      path: '/about',
+      element: <div>About</div>
+    },
+    {
+      path: '/contact',
+      element: <div>Contact</div>
+    }
+  ],
+  {}
+);
 
 function App() {
   return (
@@ -16,12 +41,10 @@ function App() {
         theme={theme}>
         <CssBaseline />
         <ColorModeToggle />
-        <Sheet>
-          <MyParticles /> 
-          <div className="text-main relative flex w-screen h-screen justify-center items-center z-50">
-            <LandingPage />
-          </div>
-        </Sheet>
+        <MyParticles />
+        <MainWrapper>
+          <RouterProvider router={router} />
+        </MainWrapper>
       </CssVarsProvider>
     </>
   );
